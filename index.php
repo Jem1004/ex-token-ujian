@@ -121,19 +121,20 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #f0fff4;
             color: var(--text-dark);
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 8px;
             line-height: 1.6;
             margin: 0;
+            overflow: hidden;
         }
 
         /* Container and Layout */
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 420px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -141,49 +142,52 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             display: flex;
             flex-direction: column;
             justify-content: center;
+            max-height: 100vh;
         }
 
         /* Card Design */
         .card {
             background: var(--pure-white);
-            border-radius: 16px;
+            border-radius: 12px;
             box-shadow: 0 4px 20px rgba(46, 204, 113, 0.15);
             overflow: hidden;
-            padding: 32px;
+            padding: 20px;
             position: relative;
             border: 2px solid var(--primary-green);
             width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
+            max-height: 95vh;
+            overflow-y: auto;
         }
 
         /* Logo Section */
         .logo-section {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             position: relative;
         }
 
         .logo-container {
             display: inline-block;
             position: relative;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .logo-img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 2px solid var(--primary-green);
         }
 
         .logo-fallback {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: var(--primary-green);
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -192,15 +196,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .logo-fallback i {
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: white;
         }
 
         .school-name {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--text-dark);
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
             background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -208,7 +212,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .exam-title {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--dark-gray);
             margin: 0;
@@ -216,7 +220,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Content Section */
         .card-content {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -225,13 +229,13 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .info-text {
             text-align: center;
             color: var(--text-dark);
-            margin-bottom: 20px;
-            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-size: 0.85rem;
             font-weight: 500;
-            line-height: 1.5;
-            padding: 12px 16px;
+            line-height: 1.4;
+            padding: 10px 12px;
             background: rgba(46, 204, 113, 0.1);
-            border-radius: 8px;
+            border-radius: 6px;
             border: 1px solid var(--primary-green);
         }
 
@@ -242,16 +246,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Form Styling */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             position: relative;
         }
 
         .input-label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
             color: var(--text-dark);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
 
@@ -268,10 +272,10 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .input-container input[type="text"] {
             width: 100%;
-            padding: 16px 20px 16px 50px;
+            padding: 14px 16px 14px 42px;
             border: 2px solid var(--medium-gray);
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 6px;
+            font-size: 1rem;
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             background: var(--pure-white);
@@ -295,9 +299,9 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .input-icon {
             position: absolute;
-            left: 20px;
+            left: 16px;
             color: var(--primary-green);
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             pointer-events: none;
             transition: var(--transition);
             z-index: 2;
@@ -313,10 +317,10 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 24px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             font-family: 'Poppins', sans-serif;
@@ -372,7 +376,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* Help Section */
         .token-help {
             text-align: center;
-            margin: 16px 0;
+            margin: 12px 0;
             position: relative;
         }
 
@@ -457,8 +461,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Footer */
         .card-footer {
-            margin-top: 16px;
-            padding-top: 12px;
+            margin-top: 12px;
+            padding-top: 8px;
             border-top: 1px solid var(--medium-gray);
             margin-bottom: 0;
         }
@@ -651,65 +655,236 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* Responsive Design */
         @media (max-width: 640px) {
             body {
-                padding: 16px;
+                padding: 4px;
+                height: 100vh;
+                overflow: hidden;
             }
 
             .container {
                 max-width: 100%;
+                max-height: 100vh;
             }
 
             .card {
-                padding: 24px 20px;
+                padding: 16px 14px;
+                max-height: 98vh;
             }
 
             .logo-img,
             .logo-fallback {
-                width: 90px;
-                height: 90px;
-            }
-
-            .school-name {
-                font-size: 1.4rem;
-            }
-
-            .input-container input[type="text"] {
-                padding: 14px 18px 14px 44px;
-                font-size: 1rem;
-            }
-
-            .btn {
-                padding: 14px 20px;
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 12px;
-            }
-
-            .card {
-                padding: 20px 16px;
-            }
-
-            .logo-img,
-            .logo-fallback {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
             }
 
             .school-name {
                 font-size: 1.2rem;
             }
 
+            .exam-title {
+                font-size: 0.85rem;
+            }
+
+            .info-text {
+                font-size: 0.8rem;
+                padding: 8px 10px;
+                margin-bottom: 12px;
+            }
+
+            .input-label {
+                font-size: 0.8rem;
+            }
+
             .input-container input[type="text"] {
-                padding: 12px 16px 12px 40px;
+                padding: 12px 14px 12px 38px;
                 font-size: 0.95rem;
+            }
+
+            .input-icon {
+                left: 14px;
+                font-size: 1rem;
             }
 
             .btn {
                 padding: 12px 16px;
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 2px;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+                max-height: 100vh;
+            }
+
+            .card {
+                padding: 12px 10px;
+                max-height: 99vh;
+                border-radius: 8px;
+            }
+
+            .logo-img,
+            .logo-fallback {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-fallback i {
+                font-size: 1.8rem;
+            }
+
+            .school-name {
+                font-size: 1.1rem;
+                margin-bottom: 4px;
+            }
+
+            .exam-title {
+                font-size: 0.8rem;
+            }
+
+            .logo-section {
+                margin-bottom: 12px;
+            }
+
+            .logo-container {
+                margin-bottom: 8px;
+            }
+
+            .info-text {
+                font-size: 0.75rem;
+                padding: 6px 8px;
+                margin-bottom: 10px;
+            }
+
+            .card-content {
+                margin-bottom: 12px;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            .input-label {
+                font-size: 0.75rem;
+                margin-bottom: 4px;
+            }
+
+            .input-container input[type="text"] {
+                padding: 10px 12px 10px 34px;
+                font-size: 0.9rem;
+                letter-spacing: 1.5px;
+            }
+
+            .input-icon {
+                left: 12px;
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+
+            .btn-icon {
+                font-size: 0.9rem;
+                margin-right: 8px;
+            }
+
+            .security-note {
+                padding: 8px;
+                margin-top: 12px;
+            }
+
+            .security-note p {
+                font-size: 0.75rem;
+            }
+
+            .help-text {
+                font-size: 0.75rem;
+                margin-top: 6px;
+            }
+        }
+
+        /* Extra small mobile optimization */
+        @media (max-width: 360px) {
+            body {
+                padding: 1px;
+            }
+
+            .card {
+                padding: 10px 8px;
+                max-height: 99vh;
+            }
+
+            .logo-img,
+            .logo-fallback {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-fallback i {
+                font-size: 1.5rem;
+            }
+
+            .school-name {
+                font-size: 1rem;
+            }
+
+            .exam-title {
+                font-size: 0.75rem;
+            }
+
+            .info-text {
+                font-size: 0.7rem;
+                padding: 5px 6px;
+                margin-bottom: 8px;
+            }
+
+            .input-label {
+                font-size: 0.7rem;
+            }
+
+            .input-container input[type="text"] {
+                padding: 8px 10px 8px 30px;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+
+            .input-icon {
+                left: 10px;
+                font-size: 0.8rem;
+            }
+
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+
+            .security-note {
+                padding: 6px;
+                margin-top: 8px;
+            }
+
+            .security-note p {
+                font-size: 0.7rem;
+            }
+
+            .help-text {
+                font-size: 0.7rem;
+            }
+
+            .copyright {
+                font-size: 0.7rem;
+            }
+
+            .footer-link {
+                font-size: 0.7rem;
+                padding: 2px 4px;
             }
         }
 
