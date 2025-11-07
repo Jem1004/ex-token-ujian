@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Compact Layout - SMP Negeri 3</title>
+    <title>Test Clean Form Layout - SMP Negeri 3</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,21 +15,17 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Complete Inline CSS for Compact Layout -->
+    <!-- Clean CSS -->
     <style>
         /* CSS Variables */
         :root {
             --primary-green: #2ecc71;
             --primary-dark: #27ae60;
-            --primary-light: #a8e6cf;
-            --accent-green: #16a085;
             --pure-white: #ffffff;
             --light-gray: #f8f9fa;
             --medium-gray: #e9ecef;
             --dark-gray: #495057;
             --text-dark: #2c3e50;
-            --shadow-lg: 0 8px 32px rgba(46, 204, 113, 0.16);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Reset and Base Styles */
@@ -41,7 +37,7 @@
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #f0fff4 50%, #e8f8f5 100%);
+            background: #f0fff4;
             color: var(--text-dark);
             min-height: 100vh;
             display: flex;
@@ -49,104 +45,36 @@
             justify-content: center;
             padding: 20px;
             line-height: 1.6;
-            position: relative;
-            overflow-x: hidden;
             margin: 0;
         }
 
-        /* Background decoration */
-        body::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-            opacity: 0.3;
-            animation: float 20s ease-in-out infinite;
-            z-index: -1;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
-        }
-
-        /* Responsive Info */
-        .responsive-info {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background: var(--text-dark);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            z-index: 1000;
-            font-weight: 500;
-        }
-
-        /* Space indicator */
-        .space-indicator {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            background: var(--primary-green);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            z-index: 1000;
-            font-weight: 500;
-        }
-
-        /* Container and Layout - COMPACT VERSION */
+        /* Container and Layout */
         .container {
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        /* Card Design - COMPACT VERSION */
+        /* Card Design */
         .card {
             background: var(--pure-white);
-            border-radius: 24px;
-            box-shadow: var(--shadow-lg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(46, 204, 113, 0.15);
             overflow: hidden;
             padding: 32px;
             position: relative;
-            transition: var(--transition);
-            border: 1px solid rgba(46, 204, 113, 0.1);
+            border: 2px solid var(--primary-green);
             width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(46, 204, 113, 0.2);
-        }
-
-        /* Logo Section - COMPACT */
+        /* Logo Section */
         .logo-section {
             text-align: center;
             margin-bottom: 24px;
@@ -160,15 +88,15 @@
         }
 
         .logo-fallback {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
-            border-radius: 20px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-green);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+            border: 2px solid var(--primary-dark);
         }
 
         .logo-fallback i {
@@ -181,10 +109,6 @@
             font-weight: 700;
             color: var(--text-dark);
             margin: 0 0 8px 0;
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .exam-title {
@@ -194,7 +118,7 @@
             margin: 0;
         }
 
-        /* Content Section - COMPACT */
+        /* Content Section */
         .card-content {
             margin-bottom: 20px;
             flex: 1;
@@ -204,15 +128,15 @@
 
         .info-text {
             text-align: center;
-            color: var(--dark-gray);
-            margin-bottom: 24px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
             font-size: 0.95rem;
-            font-weight: 400;
-            line-height: 1.6;
-            padding: 14px;
-            background: linear-gradient(135deg, var(--primary-light), rgba(168, 230, 207, 0.3));
-            border-radius: 16px;
-            border-left: 4px solid var(--primary-green);
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 12px 16px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--primary-green);
         }
 
         .info-text i {
@@ -220,7 +144,7 @@
             margin-right: 8px;
         }
 
-        /* Form Styling - COMPACT */
+        /* Form Styling */
         .form-group {
             margin-bottom: 20px;
             position: relative;
@@ -248,25 +172,23 @@
 
         .input-container input[type="text"] {
             width: 100%;
-            padding: 18px 24px 18px 56px;
+            padding: 16px 20px 16px 50px;
             border: 2px solid var(--medium-gray);
-            border-radius: 16px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            background: var(--light-gray);
-            transition: var(--transition);
+            font-weight: 600;
+            background: var(--pure-white);
             color: var(--text-dark);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-align: center;
+            text-transform: uppercase;
         }
 
         .input-container input[type="text"]:focus {
             border-color: var(--primary-green);
-            background: var(--pure-white);
             outline: none;
-            box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.15);
-            transform: translateY(-2px);
+            box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
         }
 
         .input-icon {
@@ -275,91 +197,57 @@
             color: var(--primary-green);
             font-size: 1.3rem;
             pointer-events: none;
-            transition: var(--transition);
             z-index: 2;
         }
 
-        /* Button Styling - COMPACT */
+        /* Button Styling */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 18px 32px;
+            padding: 16px 24px;
             border: none;
-            border-radius: 16px;
-            font-size: 1.05rem;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: var(--transition);
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
             width: 100%;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-icon {
-            margin-right: 12px;
-            font-size: 1.1rem;
+            margin-right: 10px;
+            font-size: 1rem;
         }
 
         .btn-submit {
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
+            background: var(--primary-green);
             color: var(--pure-white);
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
+            border: 2px solid var(--primary-green);
         }
 
         .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
-            background: linear-gradient(135deg, var(--primary-dark), var(--accent-green));
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
 
-        /* Help Section - COMPACT */
-        .token-help {
-            text-align: center;
-            margin: 16px 0;
-            position: relative;
-        }
-
-        .btn-help {
-            background: none;
-            border: none;
-            color: var(--primary-green);
-            font-size: 1.4rem;
-            cursor: pointer;
-            transition: var(--transition);
-            padding: 8px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-help:hover {
-            color: var(--primary-dark);
-            background: rgba(46, 204, 113, 0.1);
-            transform: scale(1.1);
-        }
-
-        /* Security Note - COMPACT */
+        /* Security Note */
         .security-note {
             display: flex;
-            align-items: flex-start;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(168, 230, 207, 0.1));
-            padding: 16px;
-            border-radius: 16px;
+            align-items: center;
+            background: rgba(46, 204, 113, 0.05);
+            padding: 12px;
+            border-radius: 8px;
             margin-top: 16px;
             margin-bottom: 0;
-            border: 1px solid rgba(46, 204, 113, 0.1);
-            border-left: 4px solid var(--primary-green);
+            border: 1px solid var(--primary-green);
         }
 
         .security-note i {
             color: var(--primary-green);
             font-size: 1.2rem;
             margin-right: 12px;
-            margin-top: 2px;
             flex-shrink: 0;
         }
 
@@ -371,10 +259,10 @@
             line-height: 1.6;
         }
 
-        /* Footer - COMPACT */
+        /* Footer */
         .card-footer {
-            margin-top: 20px;
-            padding-top: 16px;
+            margin-top: 16px;
+            padding-top: 12px;
             border-top: 1px solid var(--medium-gray);
             margin-bottom: 0;
         }
@@ -411,10 +299,10 @@
             color: var(--primary-dark);
         }
 
-        /* Responsive Design - COMPACT */
+        /* Responsive Design */
         @media (max-width: 640px) {
             body {
-                padding: 12px;
+                padding: 16px;
             }
 
             .container {
@@ -423,14 +311,6 @@
 
             .card {
                 padding: 24px 20px;
-            }
-
-            .logo-section {
-                margin-bottom: 20px;
-            }
-
-            .logo-container {
-                margin-bottom: 12px;
             }
 
             .logo-fallback {
@@ -442,23 +322,6 @@
                 font-size: 1.4rem;
             }
 
-            .exam-title {
-                font-size: 0.95rem;
-            }
-
-            .card-content {
-                margin-bottom: 16px;
-            }
-
-            .info-text {
-                margin-bottom: 20px;
-                padding: 12px;
-            }
-
-            .form-group {
-                margin-bottom: 16px;
-            }
-
             .input-container input[type="text"] {
                 padding: 14px 18px 14px 44px;
                 font-size: 1rem;
@@ -468,42 +331,15 @@
                 padding: 14px 20px;
                 font-size: 1rem;
             }
-
-            .token-help {
-                margin: 12px 0;
-            }
-
-            .security-note {
-                padding: 12px;
-                margin-top: 12px;
-            }
-
-            .card-footer {
-                margin-top: 16px;
-                padding-top: 12px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 6px;
-            }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 8px;
+                padding: 12px;
             }
 
             .card {
                 padding: 20px 16px;
-            }
-
-            .logo-section {
-                margin-bottom: 16px;
-            }
-
-            .logo-container {
-                margin-bottom: 10px;
             }
 
             .logo-fallback {
@@ -515,29 +351,6 @@
                 font-size: 1.2rem;
             }
 
-            .exam-title {
-                font-size: 0.9rem;
-            }
-
-            .card-content {
-                margin-bottom: 12px;
-            }
-
-            .info-text {
-                margin-bottom: 16px;
-                padding: 10px;
-                font-size: 0.85rem;
-            }
-
-            .form-group {
-                margin-bottom: 14px;
-            }
-
-            .input-label {
-                margin-bottom: 6px;
-                font-size: 0.9rem;
-            }
-
             .input-container input[type="text"] {
                 padding: 12px 16px 12px 40px;
                 font-size: 0.95rem;
@@ -547,45 +360,48 @@
                 padding: 12px 16px;
                 font-size: 0.95rem;
             }
-
-            .token-help {
-                margin: 10px 0;
-            }
-
-            .security-note {
-                padding: 10px;
-                margin-top: 10px;
-                font-size: 0.8rem;
-            }
-
-            .card-footer {
-                margin-top: 12px;
-                padding-top: 10px;
-            }
-
-            .copyright {
-                font-size: 0.75rem;
-            }
-
-            .footer-link {
-                font-size: 0.75rem;
-            }
         }
 
-        /* Test controls */
+        /* Test Info */
+        .test-info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: var(--text-dark);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            z-index: 1000;
+            font-weight: 500;
+        }
+
+        .space-info {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            z-index: 1000;
+            font-weight: 500;
+        }
+
         .test-controls {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 10px;
+            right: 10px;
             background: var(--pure-white);
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(46, 204, 113, 0.15);
             z-index: 1000;
         }
 
         .test-controls h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             color: var(--text-dark);
             font-size: 0.9rem;
         }
@@ -593,14 +409,14 @@
         .test-btn {
             display: block;
             width: 100%;
-            padding: 8px 12px;
-            margin: 5px 0;
+            padding: 6px 10px;
+            margin: 4px 0;
             background: var(--primary-green);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             transition: var(--transition);
         }
 
@@ -608,47 +424,53 @@
             background: var(--primary-dark);
         }
 
-        .space-highlight {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: red;
+        .success-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--success-green);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            z-index: 2000;
             display: none;
         }
 
-        .space-highlight.show {
+        .success-message.show {
             display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Responsive Info -->
-    <div class="responsive-info" id="responsiveInfo">
+    <!-- Test Info -->
+    <div class="test-info" id="testInfo">
         <i class="fas fa-desktop"></i> Desktop View
     </div>
 
-    <!-- Space Indicator -->
-    <div class="space-indicator" id="spaceIndicator">
-        No Empty Space
+    <!-- Space Info -->
+    <div class="space-info" id="spaceInfo">
+        Clean Layout - No Empty Space
     </div>
 
     <!-- Test Controls -->
     <div class="test-controls">
-        <h4>📏 Test Compact Layout</h4>
-        <button class="test-btn" onclick="toggleSpaceHighlight()">Toggle Space Highlight</button>
+        <h4>📱 Test Form Layout</h4>
         <button class="test-btn" onclick="testMobile()">Mobile (≤480px)</button>
         <button class="test-btn" onclick="testTablet()">Tablet (≤640px)</button>
         <button class="test-btn" onclick="testDesktop()">Desktop</button>
         <button class="test-btn" onclick="measureSpace()">Measure Space</button>
+        <button class="test-btn" onclick="testToken()">Test Token (DEMO1)</button>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i> Token Valid!
     </div>
 
     <div class="container">
         <main class="card">
-            <!-- Space highlight indicator -->
-            <div class="space-highlight" id="spaceHighlight"></div>
-
             <!-- Logo Section -->
             <header class="logo-section">
                 <div class="logo-container">
@@ -699,13 +521,6 @@
                     </button>
                 </form>
 
-                <!-- Help Section -->
-                <div class="token-help">
-                    <button type="button" class="btn-help">
-                        <i class="fas fa-question-circle"></i>
-                    </button>
-                </div>
-
                 <!-- Security Note -->
                 <div class="security-note">
                     <i class="fas fa-shield-alt"></i>
@@ -742,11 +557,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const tokenForm = document.getElementById('tokenForm');
             const tokenInput = document.getElementById('tokenInput');
-            const responsiveInfo = document.getElementById('responsiveInfo');
-            const spaceIndicator = document.getElementById('spaceIndicator');
+            const submitBtn = document.getElementById('submitBtn');
+            const testInfo = document.getElementById('testInfo');
+            const spaceInfo = document.getElementById('spaceInfo');
+            const successMessage = document.getElementById('successMessage');
 
             // Update responsive info
-            function updateResponsiveInfo() {
+            function updateTestInfo() {
                 const width = window.innerWidth;
                 let info = '';
                 let icon = '';
@@ -754,7 +571,7 @@
                 if (width <= 480) {
                     info = 'Mobile View (≤480px)';
                     icon = 'fa-mobile-alt';
-                } else if (width <= 640) {
+                } else if (width <= 640px) {
                     info = 'Tablet View (≤640px)';
                     icon = 'fa-tablet-alt';
                 } else {
@@ -762,7 +579,7 @@
                     icon = 'fa-desktop';
                 }
 
-                responsiveInfo.innerHTML = `<i class="fas ${icon}"></i> ${info}`;
+                testInfo.innerHTML = `<i class="fas ${icon}"></i> ${info}`;
             }
 
             // Check for empty space
@@ -771,13 +588,14 @@
                 const cardRect = card.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
                 const spaceBelow = windowHeight - cardRect.bottom;
+                const spaceAbove = cardRect.top;
 
-                if (spaceBelow > 50) {
-                    spaceIndicator.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Empty space: ${Math.round(spaceBelow)}px`;
-                    spaceIndicator.style.background = '#e17055';
+                if (spaceBelow > 20 || spaceAbove > 20) {
+                    spaceInfo.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Space: ${Math.round(spaceAbove)}px + ${Math.round(spaceBelow)}px`;
+                    spaceInfo.style.background = '#e17055';
                 } else {
-                    spaceIndicator.innerHTML = `<i class="fas fa-check-circle"></i> No empty space (${Math.round(spaceBelow)}px)`;
-                    spaceIndicator.style.background = 'var(--primary-green)';
+                    spaceInfo.innerHTML = `<i class="fas fa-check-circle"></i> Clean Layout (${Math.round(spaceAbove)}px + ${Math.round(spaceBelow)}px)`;
+                    spaceInfo.style.background = 'var(--primary-green)';
                 }
             }
 
@@ -810,21 +628,25 @@
                 }
 
                 // Demo success
-                alert('Token valid! (Demo mode - tidak ada redirect)');
+                successMessage.classList.add('show');
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 2000);
+
                 tokenInput.value = '';
                 tokenInput.focus();
             });
 
             // Update info on load and resize
-            updateResponsiveInfo();
+            updateTestInfo();
             checkEmptySpace();
             window.addEventListener('resize', () => {
-                updateResponsiveInfo();
+                updateTestInfo();
                 checkEmptySpace();
             });
 
             // Log info
-            console.log('=== Compact Layout Test ===');
+            console.log('=== Clean Form Layout Test ===');
             console.log('Screen width:', window.innerWidth);
             console.log('Screen height:', window.innerHeight);
             console.log('Device pixel ratio:', window.devicePixelRatio);
@@ -832,17 +654,12 @@
         });
 
         // Test functions
-        function toggleSpaceHighlight() {
-            const highlight = document.getElementById('spaceHighlight');
-            highlight.classList.toggle('show');
-        }
-
         function testMobile() {
             document.querySelector('.container').style.maxWidth = '100%';
             document.querySelector('.card').style.padding = '20px 16px';
             document.querySelector('.logo-fallback').style.width = '80px';
             document.querySelector('.logo-fallback').style.height = '80px';
-            alert('Mobile compact view applied (≤480px)');
+            alert('Mobile clean view applied (≤480px)');
         }
 
         function testTablet() {
@@ -850,15 +667,15 @@
             document.querySelector('.card').style.padding = '24px 20px';
             document.querySelector('.logo-fallback').style.width = '90px';
             document.querySelector('.logo-fallback').style.height = '90px';
-            alert('Tablet compact view applied (≤640px)');
+            alert('Tablet clean view applied (≤640px)');
         }
 
         function testDesktop() {
             document.querySelector('.container').style.maxWidth = '480px';
             document.querySelector('.card').style.padding = '32px';
-            document.querySelector('.logo-fallback').style.width = '120px';
-            document.querySelector('.logo-fallback').style.height = '120px';
-            alert('Desktop compact view applied');
+            document.querySelector('.logo-fallback').style.width = '100px';
+            document.querySelector('.logo-fallback').style.height = '100px';
+            alert('Desktop clean view applied');
         }
 
         function measureSpace() {
@@ -867,8 +684,14 @@
             const windowHeight = window.innerHeight;
             const spaceBelow = windowHeight - cardRect.bottom;
             const spaceAbove = cardRect.top;
+            const cardHeight = cardRect.height;
 
-            alert(`Space Analysis:\nAbove: ${Math.round(spaceAbove)}px\nBelow: ${Math.round(spaceBelow)}px\nTotal: ${Math.round(spaceAbove + spaceBelow)}px`);
+            alert(`Space Analysis:\nAbove: ${Math.round(spaceAbove)}px\nBelow: ${Math.round(spaceBelow)}px\nCard Height: ${Math.round(cardHeight)}px\nTotal Screen: ${Math.round(windowHeight)}px`);
+        }
+
+        function testToken() {
+            tokenInput.value = 'DEMO1';
+            tokenInput.dispatchEvent(new Event('submit'));
         }
     </script>
 </body>

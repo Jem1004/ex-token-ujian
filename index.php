@@ -119,7 +119,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #f0fff4 50%, #e8f8f5 100%);
+            background: #f0fff4;
             color: var(--text-dark);
             min-height: 100vh;
             display: flex;
@@ -127,29 +127,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             justify-content: center;
             padding: 20px;
             line-height: 1.6;
-            position: relative;
-            overflow-x: hidden;
             margin: 0;
-        }
-
-        /* Background decoration */
-        body::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-            opacity: 0.3;
-            animation: float 20s ease-in-out infinite;
-            z-index: -1;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
 
         /* Container and Layout */
@@ -168,32 +146,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* Card Design */
         .card {
             background: var(--pure-white);
-            border-radius: 24px;
-            box-shadow: var(--shadow-lg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(46, 204, 113, 0.15);
             overflow: hidden;
             padding: 32px;
             position: relative;
-            transition: var(--transition);
-            border: 1px solid rgba(46, 204, 113, 0.1);
+            border: 2px solid var(--primary-green);
             width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(46, 204, 113, 0.2);
         }
 
         /* Logo Section */
@@ -210,28 +172,23 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .logo-img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             object-fit: contain;
-            border-radius: 20px;
-            transition: var(--transition);
-            filter: drop-shadow(0 4px 12px rgba(46, 204, 113, 0.2));
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
+            border-radius: 12px;
+            border: 2px solid var(--primary-green);
         }
 
         .logo-fallback {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
-            border-radius: 20px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-green);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+            border: 2px solid var(--primary-dark);
         }
 
         .logo-fallback i {
@@ -267,15 +224,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .info-text {
             text-align: center;
-            color: var(--dark-gray);
-            margin-bottom: 24px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
             font-size: 0.95rem;
-            font-weight: 400;
-            line-height: 1.6;
-            padding: 14px;
-            background: linear-gradient(135deg, var(--primary-light), rgba(168, 230, 207, 0.3));
-            border-radius: 16px;
-            border-left: 4px solid var(--primary-green);
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 12px 16px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--primary-green);
         }
 
         .info-text i {
@@ -311,25 +268,23 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .input-container input[type="text"] {
             width: 100%;
-            padding: 18px 24px 18px 56px;
+            padding: 16px 20px 16px 50px;
             border: 2px solid var(--medium-gray);
-            border-radius: 16px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            background: var(--light-gray);
-            transition: var(--transition);
+            font-weight: 600;
+            background: var(--pure-white);
             color: var(--text-dark);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-align: center;
+            text-transform: uppercase;
         }
 
         .input-container input[type="text"]:focus {
             border-color: var(--primary-green);
-            background: var(--pure-white);
             outline: none;
-            box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.15);
-            transform: translateY(-2px);
+            box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
         }
 
         .input-container input[type="text"]::placeholder {
@@ -358,54 +313,31 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 18px 32px;
+            padding: 16px 24px;
             border: none;
-            border-radius: 16px;
-            font-size: 1.05rem;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: var(--transition);
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
             width: 100%;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-icon {
-            margin-right: 12px;
-            font-size: 1.1rem;
+            margin-right: 10px;
+            font-size: 1rem;
         }
 
         .btn-submit {
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
+            background: var(--primary-green);
             color: var(--pure-white);
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
-        }
-
-        .btn-submit::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn-submit:hover::before {
-            left: 100%;
+            border: 2px solid var(--primary-green);
         }
 
         .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
-            background: linear-gradient(135deg, var(--primary-dark), var(--accent-green));
-        }
-
-        .btn-submit:active {
-            transform: translateY(-1px);
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
 
         .btn.loading {
@@ -498,14 +430,13 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* Security Note */
         .security-note {
             display: flex;
-            align-items: flex-start;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(168, 230, 207, 0.1));
-            padding: 16px;
-            border-radius: 16px;
+            align-items: center;
+            background: rgba(46, 204, 113, 0.05);
+            padding: 12px;
+            border-radius: 8px;
             margin-top: 16px;
             margin-bottom: 0;
-            border: 1px solid rgba(46, 204, 113, 0.1);
-            border-left: 4px solid var(--primary-green);
+            border: 1px solid var(--primary-green);
         }
 
         .security-note i {
@@ -526,8 +457,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Footer */
         .card-footer {
-            margin-top: 20px;
-            padding-top: 16px;
+            margin-top: 16px;
+            padding-top: 12px;
             border-top: 1px solid var(--medium-gray);
             margin-bottom: 0;
         }
@@ -628,35 +559,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             font-size: 1.1rem;
         }
 
-        /* Animations */
-        .shake {
-            animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-        }
-
-        @keyframes shake {
-            10%, 90% { transform: translate3d(-2px, 0, 0); }
-            20%, 80% { transform: translate3d(4px, 0, 0); }
-            30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
-            40%, 60% { transform: translate3d(6px, 0, 0); }
-        }
-
-        .success-input {
-            border-color: var(--success-green) !important;
-            animation: successPulse 1.5s ease-out;
-        }
-
-        @keyframes successPulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(0, 184, 148, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(0, 184, 148, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 184, 148, 0);
-            }
-        }
-
+        
         /* Modal Styles */
         .modal {
             position: fixed;
@@ -748,7 +651,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* Responsive Design */
         @media (max-width: 640px) {
             body {
-                padding: 12px;
+                padding: 16px;
             }
 
             .container {
@@ -757,15 +660,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
             .card {
                 padding: 24px 20px;
-                border-radius: 20px;
-            }
-
-            .logo-section {
-                margin-bottom: 20px;
-            }
-
-            .logo-container {
-                margin-bottom: 12px;
             }
 
             .logo-img,
@@ -778,23 +672,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 font-size: 1.4rem;
             }
 
-            .exam-title {
-                font-size: 0.95rem;
-            }
-
-            .card-content {
-                margin-bottom: 16px;
-            }
-
-            .info-text {
-                margin-bottom: 20px;
-                padding: 12px;
-            }
-
-            .form-group {
-                margin-bottom: 16px;
-            }
-
             .input-container input[type="text"] {
                 padding: 14px 18px 14px 44px;
                 font-size: 1rem;
@@ -804,46 +681,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 padding: 14px 20px;
                 font-size: 1rem;
             }
-
-            .token-help {
-                margin: 12px 0;
-            }
-
-            .security-note {
-                padding: 12px;
-                margin-top: 12px;
-            }
-
-            .card-footer {
-                margin-top: 16px;
-                padding-top: 12px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 6px;
-            }
-
-            .modal-content {
-                padding: 20px;
-            }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 8px;
+                padding: 12px;
             }
 
             .card {
                 padding: 20px 16px;
-            }
-
-            .logo-section {
-                margin-bottom: 16px;
-            }
-
-            .logo-container {
-                margin-bottom: 10px;
             }
 
             .logo-img,
@@ -856,61 +702,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 font-size: 1.2rem;
             }
 
-            .exam-title {
-                font-size: 0.9rem;
-            }
-
-            .card-content {
-                margin-bottom: 12px;
-            }
-
-            .info-text {
-                margin-bottom: 16px;
-                padding: 10px;
-                font-size: 0.85rem;
-            }
-
-            .form-group {
-                margin-bottom: 14px;
-            }
-
-            .input-label {
-                margin-bottom: 6px;
-                font-size: 0.9rem;
-            }
-
             .input-container input[type="text"] {
                 padding: 12px 16px 12px 40px;
                 font-size: 0.95rem;
-                letter-spacing: 0.5px;
             }
 
             .btn {
                 padding: 12px 16px;
                 font-size: 0.95rem;
-            }
-
-            .token-help {
-                margin: 10px 0;
-            }
-
-            .security-note {
-                padding: 10px;
-                margin-top: 10px;
-                font-size: 0.8rem;
-            }
-
-            .card-footer {
-                margin-top: 12px;
-                padding-top: 10px;
-            }
-
-            .copyright {
-                font-size: 0.75rem;
-            }
-
-            .footer-link {
-                font-size: 0.75rem;
             }
         }
 
@@ -932,44 +731,9 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             }
         }
 
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-
-            body::before {
-                display: none;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .card {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-
-            .btn,
-            .token-help {
-                display: none;
-            }
-        }
-    </style>
+            </style>
 </head>
 <body>
-    <!-- Background decoration -->
-    <div class="bg-pattern"></div>
-
     <div class="container">
         <main class="card">
             <!-- Logo Section -->
@@ -1150,22 +914,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 // Validation
                 if (token.length !== 5) {
                     e.preventDefault();
-                    showError('Token harus terdiri dari 5 karakter');
-                    tokenInput.classList.add('shake');
+                    alert('Token harus terdiri dari 5 karakter');
                     return;
                 }
 
                 if (!/^[A-Z0-9]{5}$/.test(token)) {
                     e.preventDefault();
-                    showError('Token hanya boleh mengandung huruf besar dan angka');
-                    tokenInput.classList.add('shake');
+                    alert('Token hanya boleh mengandung huruf besar dan angka');
                     return;
                 }
-
-                // Show loading state
-                submitBtn.classList.add('loading');
-                submitBtn.disabled = true;
-                tokenInput.disabled = true;
             });
 
             // Help tooltip functionality
@@ -1240,70 +997,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 }
             });
 
-            // Helper functions
-            function showError(message) {
-                let errorDiv = document.getElementById('tokenError');
-                if (!errorDiv) {
-                    errorDiv = document.createElement('div');
-                    errorDiv.id = 'tokenError';
-                    errorDiv.className = 'error-message';
-                    errorDiv.setAttribute('role', 'alert');
-                    errorDiv.innerHTML = `
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <span></span>
-                    `;
-                    tokenInput.parentNode.appendChild(errorDiv);
-                }
-
-                errorDiv.querySelector('span').textContent = message;
-                errorDiv.classList.add('show');
-            }
-
-            // Accessibility enhancements
-            tokenInput.addEventListener('invalid', function(e) {
-                e.preventDefault();
-                const validity = tokenInput.validity;
-                let message = '';
-
-                if (validity.valueMissing) {
-                    message = 'Token harus diisi';
-                } else if (validity.patternMismatch) {
-                    message = 'Format token tidak valid';
-                } else if (validity.tooShort) {
-                    message = 'Token harus 5 karakter';
-                }
-
-                showError(message);
-                tokenInput.classList.add('shake');
-            });
-
-            // Performance optimization - debounce input events
-            let debounceTimer;
-            tokenInput.addEventListener('input', function() {
-                clearTimeout(debounceTimer);
-                debounceTimer = setTimeout(() => {
-                    // Additional validation can be added here
-                }, 300);
-            });
-
-            // Responsive testing helper
-            function checkResponsive() {
-                const width = window.innerWidth;
-                console.log('Screen width:', width);
-
-                if (width <= 480) {
-                    console.log('Mobile view');
-                } else if (width <= 640) {
-                    console.log('Tablet view');
-                } else {
-                    console.log('Desktop view');
-                }
-            }
-
-            // Check responsive on load and resize
-            checkResponsive();
-            window.addEventListener('resize', checkResponsive);
-        });
+                    });
     </script>
 </body>
 </html>
