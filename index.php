@@ -983,10 +983,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                         2024 SMP Negeri 3 - Sistem Ujian Daring
                     </p>
                     <div class="footer-links">
-                        <button type="button" class="footer-link" id="privacyBtn">
-                            <i class="fas fa-user-shield"></i>
-                            Privasi
-                        </button>
                         <button type="button" class="footer-link" id="helpBtnFooter">
                             <i class="fas fa-life-ring"></i>
                             Bantuan
@@ -997,27 +993,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         </main>
     </div>
 
-    <!-- Privacy Modal -->
-    <div class="modal" id="privacyModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Kebijakan Privasi</h3>
-                <button type="button" class="modal-close" id="closePrivacy">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Sistem ujian daring kami menjaga privasi dan keamanan data Anda:</p>
-                <ul>
-                    <li>Token ujian hanya digunakan untuk sesi ujian saat ini</li>
-                    <li>Data akses hanya untuk keperluan monitoring keamanan</li>
-                    <li>Tidak ada data pribadi yang disimpan tanpa persetujuan</li>
-                    <li>Enkripsi data end-to-end untuk keamanan maksimal</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+  
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Elements
@@ -1026,8 +1002,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             const submitBtn = document.getElementById('submitBtn');
             const helpBtn = document.getElementById('helpBtn');
             const helpTooltip = document.querySelector('.help-tooltip');
-            const privacyModal = document.getElementById('privacyModal');
-            const privacyBtn = document.getElementById('privacyBtn');
             const helpBtnFooter = document.getElementById('helpBtnFooter');
 
             // Auto focus on input
@@ -1098,40 +1072,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 }
             });
 
-            // Privacy modal
-            privacyBtn.addEventListener('click', function() {
-                privacyModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            });
-
-            document.getElementById('closePrivacy').addEventListener('click', function() {
-                privacyModal.classList.remove('show');
-                document.body.style.overflow = '';
-            });
-
+            
             // Help footer button
             helpBtnFooter.addEventListener('click', function() {
                 showTooltip();
                 setTimeout(hideTooltip, 4000);
             });
 
-            // Close modals on background click
-            privacyModal.addEventListener('click', function(e) {
-                if (e.target === privacyModal) {
-                    privacyModal.classList.remove('show');
-                    document.body.style.overflow = '';
-                }
-            });
-
+            
             // Keyboard navigation
             document.addEventListener('keydown', function(e) {
-                // ESC to close modals
-                if (e.key === 'Escape') {
-                    if (privacyModal.classList.contains('show')) {
-                        privacyModal.classList.remove('show');
-                        document.body.style.overflow = '';
-                    }
-                }
 
                 // Ctrl/Cmd + Enter to submit form
                 if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
