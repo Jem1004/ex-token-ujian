@@ -2,14 +2,14 @@
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'HTgE7EMKHyldSABUvVTsuZhLsC87');
+define('DB_PASS', 'wCvTiLwLrN6QefFvKHghIivSyma');
 define('DB_NAME', 'token_system');
 
 // Application settings
 define('TOKEN_EXPIRY_MINUTES', 15); // Changed from 5 to 15 minutes
 define('MAX_ATTEMPTS', 10);
 define('COOLDOWN_MINUTES', 10);
-define('REDIRECT_URL', 'https://exujian.smkmutuppu.com/jemtheking/akses/aksesujian/');
+define('REDIRECT_URL', 'https://pribadi.smpn3ppu.sch.id/heisiswasmpn3kamuharusjujurdalamujian/public/login/index.php');
 
 // Connect to database
 function getDbConnection() {
