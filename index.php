@@ -103,8 +103,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             --shadow-sm: 0 2px 8px rgba(46, 204, 113, 0.08);
             --shadow-md: 0 4px 16px rgba(46, 204, 113, 0.12);
             --shadow-lg: 0 8px 32px rgba(46, 204, 113, 0.16);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+                    }
 
         /* Reset and Base Styles */
         * {
@@ -119,7 +118,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f0fff4;
+            background: #ffffff;
             color: var(--text-dark);
             height: 100vh;
             display: flex;
@@ -147,13 +146,11 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Card Design */
         .card {
-            background: var(--pure-white);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(46, 204, 113, 0.15);
-            overflow: hidden;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
             padding: 20px;
             position: relative;
-            border: 2px solid var(--primary-green);
             width: 100%;
             flex: 1;
             display: flex;
@@ -179,20 +176,20 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             width: 80px;
             height: 80px;
             object-fit: contain;
-            border-radius: 10px;
-            border: 2px solid var(--primary-green);
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
         }
 
         .logo-fallback {
             width: 80px;
             height: 80px;
-            background: var(--primary-green);
-            border-radius: 10px;
+            background: #6c757d;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            border: 2px solid var(--primary-dark);
+            border: 1px solid #495057;
         }
 
         .logo-fallback i {
@@ -203,12 +200,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .school-name {
             font-size: 1.4rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: #495057;
             margin: 0 0 6px 0;
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .exam-title {
@@ -228,19 +221,19 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .info-text {
             text-align: center;
-            color: var(--text-dark);
+            color: #495057;
             margin-bottom: 16px;
             font-size: 0.85rem;
             font-weight: 500;
             line-height: 1.4;
             padding: 10px 12px;
-            background: rgba(46, 204, 113, 0.1);
-            border-radius: 6px;
-            border: 1px solid var(--primary-green);
+            background: #e9ecef;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
         }
 
         .info-text i {
-            color: var(--primary-green);
+            color: #6c757d;
             margin-right: 8px;
         }
 
@@ -254,14 +247,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             display: block;
             margin-bottom: 6px;
             font-weight: 600;
-            color: var(--text-dark);
+            color: #495057;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
 
         .input-label i {
             margin-right: 8px;
-            color: var(--primary-green);
+            color: #6c757d;
         }
 
         .input-container {
@@ -286,9 +279,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .input-container input[type="text"]:focus {
-            border-color: var(--primary-green);
+            border-color: #007bff;
             outline: none;
-            box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
         }
 
         .input-container input[type="text"]::placeholder {
@@ -300,16 +292,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .input-icon {
             position: absolute;
             left: 16px;
-            color: var(--primary-green);
+            color: #6c757d;
             font-size: 1.1rem;
             pointer-events: none;
-            transition: var(--transition);
             z-index: 2;
         }
 
         .input-container input[type="text"]:focus + .input-icon {
-            transform: scale(1.1);
-            color: var(--primary-dark);
+            color: #007bff;
         }
 
         /* Button Styling */
@@ -334,14 +324,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .btn-submit {
-            background: var(--primary-green);
-            color: var(--pure-white);
-            border: 2px solid var(--primary-green);
+            background: #007bff;
+            color: #ffffff;
+            border: 1px solid #007bff;
         }
 
         .btn-submit:hover {
-            background: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background: #0056b3;
+            border-color: #0056b3;
         }
 
         .btn.loading {
@@ -354,17 +344,12 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             width: 20px;
             height: 20px;
             border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid var(--pure-white);
+            border-top: 3px solid #ffffff;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
             margin-left: 10px;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
+        
         .btn.loading .loading-spinner {
             display: inline-block;
         }
@@ -383,10 +368,9 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .btn-help {
             background: none;
             border: none;
-            color: var(--primary-green);
+            color: #6c757d;
             font-size: 1.4rem;
             cursor: pointer;
-            transition: var(--transition);
             padding: 8px;
             border-radius: 50%;
             display: inline-flex;
@@ -395,9 +379,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .btn-help:hover {
-            color: var(--primary-dark);
-            background: rgba(46, 204, 113, 0.1);
-            transform: scale(1.1);
+            color: #495057;
+            background: #e9ecef;
         }
 
         .help-tooltip {
@@ -405,18 +388,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--text-dark);
-            color: var(--pure-white);
+            background: #495057;
+            color: #ffffff;
             padding: 12px 16px;
-            border-radius: 12px;
+            border-radius: 4px;
             font-size: 0.9rem;
             font-weight: 500;
             white-space: nowrap;
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition);
             z-index: 10;
-            box-shadow: var(--shadow-md);
             margin-bottom: 8px;
         }
 
@@ -428,23 +409,23 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             transform: translateX(-50%);
             border-width: 6px;
             border-style: solid;
-            border-color: var(--text-dark) transparent transparent transparent;
+            border-color: #495057 transparent transparent transparent;
         }
 
         /* Security Note */
         .security-note {
             display: flex;
             align-items: center;
-            background: rgba(46, 204, 113, 0.05);
+            background: #e9ecef;
             padding: 12px;
-            border-radius: 8px;
+            border-radius: 4px;
             margin-top: 16px;
             margin-bottom: 0;
-            border: 1px solid var(--primary-green);
+            border: 1px solid #ced4da;
         }
 
         .security-note i {
-            color: var(--primary-green);
+            color: #6c757d;
             font-size: 1.2rem;
             margin-right: 12px;
             margin-top: 2px;
@@ -453,7 +434,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .security-note p {
             font-size: 0.9rem;
-            color: var(--text-dark);
+            color: #495057;
             margin: 0;
             font-weight: 500;
             line-height: 1.6;
@@ -486,17 +467,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .footer-link {
             background: none;
             border: none;
-            color: var(--primary-green);
+            color: #6c757d;
             font-size: 0.8rem;
             cursor: pointer;
-            transition: var(--transition);
             padding: 4px 8px;
             border-radius: 4px;
         }
 
         .footer-link:hover {
-            background: rgba(46, 204, 113, 0.1);
-            color: var(--primary-dark);
+            background: #e9ecef;
+            color: #495057;
         }
 
         /* Help text */
@@ -511,45 +491,30 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .error-message,
         .success-message {
             padding: 16px 20px;
-            border-radius: 12px;
+            border-radius: 4px;
             margin-top: 16px;
             font-weight: 500;
             display: none;
             align-items: center;
             font-size: 0.95rem;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .error-message {
-            background: linear-gradient(135deg, #ffeaea, #fff5f5);
-            color: var(--danger-red);
-            border-left: 4px solid var(--danger-red);
-            box-shadow: 0 4px 12px rgba(225, 112, 85, 0.15);
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
 
         .error-message.rate-limit {
-            background: linear-gradient(135deg, #fff3e0, #fffbf0);
-            color: #e67e22;
-            border-left: 4px solid #e67e22;
-            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.15);
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
         }
 
         .success-message {
-            background: linear-gradient(135deg, #e8f8f5, #f0fff4);
-            color: var(--success-green);
-            border-left: 4px solid var(--success-green);
-            box-shadow: 0 4px 12px rgba(0, 184, 148, 0.15);
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
         }
 
         .error-message.show,
@@ -581,18 +546,16 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .modal.show {
             display: flex;
-            animation: fadeIn 0.3s ease-out;
         }
 
         .modal-content {
-            background: var(--pure-white);
-            padding: 32px;
-            border-radius: 16px;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
             max-width: 400px;
             width: 100%;
             text-align: center;
-            box-shadow: var(--shadow-lg);
-            animation: slideUp 0.3s ease-out;
+            border: 1px solid #dee2e6;
         }
 
         .modal-header {
@@ -611,15 +574,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             background: none;
             border: none;
             font-size: 1.2rem;
-            color: var(--dark-gray);
+            color: #6c757d;
             cursor: pointer;
             padding: 4px;
             border-radius: 4px;
-            transition: var(--transition);
         }
 
         .modal-close:hover {
-            background: var(--light-gray);
+            background: #e9ecef;
         }
 
         .modal-body {
@@ -633,23 +595,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .modal-body li {
             margin-bottom: 8px;
-            color: var(--text-dark);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            color: #495057;
         }
 
         /* Responsive Design */
@@ -658,6 +604,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 padding: 4px;
                 height: 100vh;
                 overflow: hidden;
+                background: #ffffff;
             }
 
             .container {
@@ -668,6 +615,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             .card {
                 padding: 16px 14px;
                 max-height: 98vh;
+                background: #ffffff;
+                border: 1px solid #dee2e6;
             }
 
             .logo-img,
@@ -715,6 +664,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 padding: 2px;
                 height: 100vh;
                 overflow: hidden;
+                background: #ffffff;
             }
 
             .container {
@@ -725,7 +675,9 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             .card {
                 padding: 12px 10px;
                 max-height: 99vh;
-                border-radius: 8px;
+                border-radius: 4px;
+                background: #ffffff;
+                border: 1px solid #dee2e6;
             }
 
             .logo-img,
@@ -814,11 +766,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         @media (max-width: 360px) {
             body {
                 padding: 1px;
+                background: #ffffff;
             }
 
             .card {
                 padding: 10px 8px;
                 max-height: 99vh;
+                background: #ffffff;
+                border: 1px solid #dee2e6;
             }
 
             .logo-img,
