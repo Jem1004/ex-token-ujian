@@ -141,6 +141,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             max-height: 100vh;
         }
 
@@ -152,6 +153,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             padding: 20px;
             position: relative;
             width: 100%;
+            max-width: 420px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -221,19 +223,19 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .info-text {
             text-align: center;
-            color: #495057;
+            color: #155724;
             margin-bottom: 16px;
             font-size: 0.85rem;
             font-weight: 500;
             line-height: 1.4;
             padding: 10px 12px;
-            background: #e9ecef;
+            background: rgba(40, 167, 69, 0.1);
             border-radius: 4px;
-            border: 1px solid #ced4da;
+            border: 1px solid rgba(40, 167, 69, 0.2);
         }
 
         .info-text i {
-            color: #6c757d;
+            color: #28a745;
             margin-right: 8px;
         }
 
@@ -254,7 +256,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .input-label i {
             margin-right: 8px;
-            color: #6c757d;
+            color: #28a745;
         }
 
         .input-container {
@@ -279,7 +281,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .input-container input[type="text"]:focus {
-            border-color: #007bff;
+            border-color: #28a745;
             outline: none;
         }
 
@@ -292,14 +294,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .input-icon {
             position: absolute;
             left: 16px;
-            color: #6c757d;
+            color: #28a745;
             font-size: 1.1rem;
             pointer-events: none;
             z-index: 2;
         }
 
         .input-container input[type="text"]:focus + .input-icon {
-            color: #007bff;
+            color: #28a745;
         }
 
         /* Button Styling */
@@ -324,14 +326,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .btn-submit {
-            background: #007bff;
+            background: #28a745;
             color: #ffffff;
-            border: 1px solid #007bff;
+            border: 1px solid #28a745;
         }
 
         .btn-submit:hover {
-            background: #0056b3;
-            border-color: #0056b3;
+            background: #218838;
+            border-color: #1e7e34;
         }
 
         .btn.loading {
@@ -368,7 +370,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .btn-help {
             background: none;
             border: none;
-            color: #6c757d;
+            color: #28a745;
             font-size: 1.4rem;
             cursor: pointer;
             padding: 8px;
@@ -379,8 +381,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .btn-help:hover {
-            color: #495057;
-            background: #e9ecef;
+            color: #218838;
+            background: rgba(40, 167, 69, 0.1);
         }
 
         .help-tooltip {
@@ -388,7 +390,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: #495057;
+            background: #155724;
             color: #ffffff;
             padding: 12px 16px;
             border-radius: 4px;
@@ -409,23 +411,23 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             transform: translateX(-50%);
             border-width: 6px;
             border-style: solid;
-            border-color: #495057 transparent transparent transparent;
+            border-color: #155724 transparent transparent transparent;
         }
 
         /* Security Note */
         .security-note {
             display: flex;
             align-items: center;
-            background: #e9ecef;
+            background: rgba(40, 167, 69, 0.1);
             padding: 12px;
             border-radius: 4px;
             margin-top: 16px;
             margin-bottom: 0;
-            border: 1px solid #ced4da;
+            border: 1px solid rgba(40, 167, 69, 0.2);
         }
 
         .security-note i {
-            color: #6c757d;
+            color: #28a745;
             font-size: 1.2rem;
             margin-right: 12px;
             margin-top: 2px;
@@ -467,7 +469,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .footer-link {
             background: none;
             border: none;
-            color: #6c757d;
+            color: #28a745;
             font-size: 0.8rem;
             cursor: pointer;
             padding: 4px 8px;
@@ -475,8 +477,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .footer-link:hover {
-            background: #e9ecef;
-            color: #495057;
+            background: rgba(40, 167, 69, 0.1);
+            color: #218838;
         }
 
         /* Help text */
@@ -574,14 +576,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             background: none;
             border: none;
             font-size: 1.2rem;
-            color: #6c757d;
+            color: #28a745;
             cursor: pointer;
             padding: 4px;
             border-radius: 4px;
         }
 
         .modal-close:hover {
-            background: #e9ecef;
+            background: rgba(40, 167, 69, 0.1);
+            color: #218838;
         }
 
         .modal-body {
@@ -610,6 +613,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             .container {
                 max-width: 100%;
                 max-height: 100vh;
+                align-items: center;
             }
 
             .card {
@@ -617,6 +621,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 max-height: 98vh;
                 background: #ffffff;
                 border: 1px solid #dee2e6;
+                width: 100%;
+                max-width: 400px;
             }
 
             .logo-img,
@@ -646,6 +652,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             .input-container input[type="text"] {
                 padding: 12px 14px 12px 38px;
                 font-size: 0.95rem;
+                text-align: center;
             }
 
             .input-icon {
@@ -670,6 +677,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             .container {
                 max-width: 100%;
                 max-height: 100vh;
+                align-items: center;
             }
 
             .card {
@@ -678,6 +686,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 border-radius: 4px;
                 background: #ffffff;
                 border: 1px solid #dee2e6;
+                width: 100%;
+                max-width: 380px;
             }
 
             .logo-img,
@@ -730,6 +740,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 padding: 10px 12px 10px 34px;
                 font-size: 0.9rem;
                 letter-spacing: 1.5px;
+                text-align: center;
             }
 
             .input-icon {
@@ -774,6 +785,8 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 max-height: 99vh;
                 background: #ffffff;
                 border: 1px solid #dee2e6;
+                width: 100%;
+                max-width: 360px;
             }
 
             .logo-img,
@@ -808,6 +821,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 padding: 8px 10px 8px 30px;
                 font-size: 0.85rem;
                 letter-spacing: 1px;
+                text-align: center;
             }
 
             .input-icon {
