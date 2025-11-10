@@ -7,7 +7,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
 
 // Handle login
 if (isset($_POST['admin_password'])) {
-    if ($_POST['admin_password'] === 'smkmutu@30407288') {
+    if ($_POST['admin_password'] === 'indonesia2025') {
         $_SESSION['admin_logged_in'] = true;
         $isLoggedIn = true;
     } else {
