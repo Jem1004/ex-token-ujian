@@ -12,9 +12,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database configuration - update these values
-$db_host = 'localhost';
+$db_host = 'mysql';
 $db_user = 'root';
-$db_pass = '';
+$db_pass = 'token_exujian_2025_dev';
 $db_name = 'token_system';
 
 // Colors for terminal output

@@ -1,49 +1,9 @@
-<?php
-require_once 'config.php';
-
-$errorMessage = '';
-$isRateLimited = false;
-
-// Session management
-session_start();
-// Handle token submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
-    $ip = $_SERVER['REMOTE_ADDR'];
-
-    // Check rate limiting
-    if (checkRateLimiting($ip)) {
-        $errorMessage = 'Terlalu banyak percobaan. Silakan coba lagi nanti.';
-        $isRateLimited = true;
-    } else {
-        $tokenValue = strtoupper(trim($_POST['token']));
-        $result = validateToken($tokenValue);
-
-        if ($result['valid']) {
-            // Save token in session
-            $_SESSION['valid_token'] = $tokenValue;
-            $_SESSION['token_expires'] = strtotime($result['expires_at']);
-
-            // Redirect to target URL
-            header('Location: ' . REDIRECT_URL);
-            exit;
-        } else {
-            $errorMessage = 'Token tidak valid. Silakan coba lagi.';
-        }
-    }
-}
-
-// Clear session when accessing token input page
-if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']) === 'index.php') {
-    unset($_SESSION['valid_token']);
-    unset($_SESSION['token_expires']);
-}
-?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Ujian Daring - SMP Negeri 3</title>
+    <title>Portal Ujian Daring - SMP Negeri 3 (Test)</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +15,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 
@@ -560,7 +519,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             font-size: 1.1rem;
         }
 
-        
+
         /* Modal Styles */
         .modal {
             position: fixed;
@@ -997,8 +956,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 border-width: 2px;
             }
         }
-
-            </style>
+    </style>
 </head>
 <body>
     <div class="container">
@@ -1048,15 +1006,6 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                                 <i class="fas fa-shield-halved"></i>
                             </div>
                         </div>
-
-                        <!-- Error Message -->
-                        <?php if (!empty($errorMessage)): ?>
-                            <div class="error-message show <?php echo $isRateLimited ? 'rate-limit' : ''; ?>"
-                                 id="tokenError" role="alert">
-                                <i class="fas fa-<?php echo $isRateLimited ? 'clock' : 'exclamation-triangle'; ?>"></i>
-                                <span><?php echo htmlspecialchars($errorMessage); ?></span>
-                            </div>
-                        <?php endif; ?>
 
                         <!-- Help text -->
                         <div id="tokenHelp" class="help-text">
@@ -1115,7 +1064,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         </main>
     </div>
 
-  
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Elements

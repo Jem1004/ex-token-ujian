@@ -1,0 +1,36 @@
+{
+  "name": "token-exujian",
+  "version": "1.0.0",
+  "description": "Token authentication system for online exams",
+  "main": "dev-server.js",
+  "scripts": {
+    "dev": "nodemon dev-server.js",
+    "start": "node dev-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:dev": "docker-compose --profile development up -d"
+  },
+  "keywords": [
+    "token",
+    "authentication",
+    "php",
+    "mysql",
+    "exam",
+    "smpn3"
+  ],
+  "author": "SMP Negeri 3 Penajam Paser Utara",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

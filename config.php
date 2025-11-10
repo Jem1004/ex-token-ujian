@@ -1,8 +1,8 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql');
 define('DB_USER', 'root');
-define('DB_PASS', 'wCvTiLwLrN6QefFvKHghIivSyma');
+define('DB_PASS', 'token_exujian_2025_dev');
 define('DB_NAME', 'token_system');
 
 // Application settings
