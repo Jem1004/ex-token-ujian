@@ -9,7 +9,7 @@ define('DB_NAME', 'token_system');
 define('TOKEN_EXPIRY_MINUTES', 15); // Changed from 5 to 15 minutes
 define('MAX_ATTEMPTS', 10);
 define('COOLDOWN_MINUTES', 10);
-define('REDIRECT_URL', 'https://pribadi.smpn3ppu.sch.id/heisiswasmpn3kamuharusjujurdalamujian/public/login/index.php');
+define('REDIRECT_URL', 'https://exujian.smkmutuppu.com/jemtheking/akses/aksesujian2025/login/index.php');
 
 // Connect to database
 function getDbConnection() {
