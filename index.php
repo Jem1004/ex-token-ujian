@@ -43,7 +43,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Ujian Daring - SMP Negeri 3</title>
+    <title>Portal Ujian Daring - SMK MUTU PPU</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,17 +60,17 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 
     <!-- Meta tags for SEO and social sharing -->
-    <meta name="description" content="Portal ujian daring SMP Negeri 3 - Masukkan token Anda untuk mengakses sistem ujian">
+    <meta name="description" content="Portal ujian daring SMK MUTU PPU - Masukkan token Anda untuk mengakses sistem ujian">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="author" content="SMP Negeri 3">
+    <meta name="author" content="SMK MUTU PPU">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Portal Ujian Daring - SMP Negeri 3">
+    <meta property="og:title" content="Portal Ujian Daring - SMK MUTU PPU">
     <meta property="og:description" content="Masukkan token ujian Anda untuk mengakses sistem ujian daring">
     <meta property="og:type" content="website">
 
     <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#2ecc71">
+    <meta name="theme-color" content="#2563eb">
 
     <!-- Cache control -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -85,11 +85,11 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
     <style>
         /* CSS Variables */
         :root {
-            --primary-green: #10b981;
-            --primary-dark: #059669;
-            --primary-light: #d1fae5;
-            --accent-green: #065f46;
-            --success-green: #00b894;
+            --primary-blue: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #dbeafe;
+            --accent-blue: #1e3a8a;
+            --success-blue: #0ea5e9;
             --warning-amber: #fbbf24;
             --danger-red: #ef4444;
             --pure-white: #ffffff;
@@ -98,10 +98,10 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             --dark-gray: #374151;
             --text-dark: #111827;
             --text-light: #6b7280;
-            --shadow-sm: 0 1px 2px 0 rgba(16, 185, 129, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(16, 185, 129, 0.1), 0 2px 4px -1px rgba(16, 185, 129, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(16, 185, 129, 0.1), 0 4px 6px -2px rgba(16, 185, 129, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(16, 185, 129, 0.1), 0 10px 10px -5px rgba(16, 185, 129, 0.04);
+            --shadow-sm: 0 1px 2px 0 rgba(37, 99, 235, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
             --radius-sm: 0.375rem;
             --radius-md: 0.5rem;
             --radius-lg: 0.75rem;
@@ -121,7 +121,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
             color: var(--text-dark);
             min-height: 100vh;
             display: flex;
@@ -190,7 +190,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .logo-fallback {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
             border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
@@ -210,7 +210,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             color: var(--text-dark);
             margin: 0 0 0.5rem 0;
             letter-spacing: -0.025em;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -233,7 +233,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .info-text {
             text-align: center;
-            color: var(--accent-green);
+            color: var(--accent-blue);
             margin-bottom: 1.5rem;
             font-size: 0.875rem;
             font-weight: 500;
@@ -241,11 +241,11 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             padding: 1rem 1.25rem;
             background: var(--primary-light);
             border-radius: var(--radius-lg);
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(37, 99, 235, 0.2);
         }
 
         .info-text i {
-            color: var(--primary-green);
+            color: var(--primary-blue);
             margin-right: 8px;
             font-size: 1rem;
         }
@@ -267,7 +267,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         .input-label i {
             margin-right: 8px;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             font-size: 0.875rem;
         }
 
@@ -294,9 +294,9 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .input-container input[type="text"]:focus {
-            border-color: var(--primary-green);
+            border-color: var(--primary-blue);
             outline: none;
-            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
         }
 
         .input-container input[type="text"]::placeholder {
@@ -309,7 +309,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .input-icon {
             position: absolute;
             left: 1.25rem;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             font-size: 1.25rem;
             pointer-events: none;
             z-index: 2;
@@ -323,18 +323,18 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
         /* Enhanced focus states for accessibility */
         .input-container input[type="text"]:focus-visible {
-            outline: 2px solid var(--primary-green);
+            outline: 2px solid var(--primary-blue);
             outline-offset: 2px;
         }
 
         .btn:focus-visible {
-            outline: 2px solid var(--primary-green);
+            outline: 2px solid var(--primary-blue);
             outline-offset: 2px;
         }
 
         /* Success state for form */
         .form-success .input-container input[type="text"] {
-            border-color: var(--success-green);
+            border-color: var(--success-blue);
         }
 
         /* Button Styling */
@@ -360,7 +360,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .btn-submit {
-            background: var(--primary-green);
+            background: var(--primary-blue);
             color: #ffffff;
             border: none;
             font-weight: 600;
@@ -391,7 +391,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .btn-help {
             background: none;
             border: none;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             font-size: 1.25rem;
             cursor: pointer;
             padding: 8px;
@@ -411,7 +411,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: #155724;
+            background: #1e3a8a;
             color: #ffffff;
             padding: 12px 16px;
             border-radius: 4px;
@@ -432,14 +432,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             transform: translateX(-50%);
             border-width: 6px;
             border-style: solid;
-            border-color: #155724 transparent transparent transparent;
+            border-color: #1e3a8a transparent transparent transparent;
         }
 
         /* Security Note */
         .security-note {
             display: flex;
             align-items: flex-start;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.1));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.1));
             padding: 1.25rem;
             border-radius: var(--radius-lg);
             margin-top: 1.5rem;
@@ -449,7 +449,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         }
 
         .security-note i {
-            color: var(--primary-green);
+            color: var(--primary-blue);
             font-size: 1.25rem;
             margin-right: 1rem;
             margin-top: 0.125rem;
@@ -497,7 +497,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         .footer-link {
             background: none;
             border: none;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             font-size: 0.75rem;
             cursor: pointer;
             padding: 0.5rem 0.75rem;
@@ -606,15 +606,15 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             background: none;
             border: none;
             font-size: 1.2rem;
-            color: #28a745;
+            color: #2563eb;
             cursor: pointer;
             padding: 4px;
             border-radius: 4px;
         }
 
         .modal-close:hover {
-            background: rgba(40, 167, 69, 0.1);
-            color: #218838;
+            background: rgba(37, 99, 235, 0.1);
+            color: #1e40af;
         }
 
         .modal-body {
@@ -971,7 +971,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             }
 
             body {
-                background: linear-gradient(135deg, #064e3b 0%, #111827 100%);
+                background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
             }
 
             .card {
@@ -983,14 +983,14 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
         /* High contrast mode support */
         @media (prefers-contrast: high) {
             :root {
-                --primary-green: #006600;
-                --primary-dark: #004d00;
+                --primary-blue: #0066cc;
+                --primary-dark: #004d99;
                 --text-dark: #000000;
                 --pure-white: #ffffff;
             }
 
             .card {
-                border: 2px solid var(--primary-green);
+                border: 2px solid var(--primary-blue);
             }
 
             .input-container input[type="text"] {
@@ -1006,13 +1006,13 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
             <!-- Logo Section -->
             <header class="logo-section">
                 <div class="logo-container">
-                    <img src="smpn3.png" alt="Logo SMP Negeri 3" class="logo-img"
+                    <img src="logo.png" alt="Logo SMK MUTU PPU" class="logo-img"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="logo-fallback" style="display: none;">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                 </div>
-                <h1 class="school-name">SMP NEGERI 3</h1>
+                <h1 class="school-name">SMK MUTU PPU</h1>
                 <p class="exam-title">Portal Ujian Daring</p>
             </header>
 
@@ -1102,7 +1102,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
                 <div class="footer-content">
                     <p class="copyright">
                         <i class="fas fa-copyright"></i>
-                        2024 SMP Negeri 3 - Sistem Ujian Daring
+                        2024 SMK MUTU PPU - Sistem Ujian Daring
                     </p>
                     <div class="footer-links">
                         <button type="button" class="footer-link" id="helpBtnFooter">
@@ -1144,7 +1144,7 @@ if ($_SERVER['PHP_SELF'] === '/TOKEN/index.php' || basename($_SERVER['PHP_SELF']
 
                 // Add visual feedback for valid input
                 if (value.length === 5) {
-                    e.target.style.borderColor = 'var(--success-green)';
+                    e.target.style.borderColor = 'var(--success-blue)';
                     tokenForm.classList.add('form-success');
                 } else {
                     e.target.style.borderColor = '';
