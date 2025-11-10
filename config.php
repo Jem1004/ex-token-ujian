@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-define('DB_HOST', 'mysql');
+define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'token_exujian_2025_dev');
 define('DB_NAME', 'token_system');
@@ -24,13 +24,14 @@ function getDbConnection() {
 
 // Generate a new token
 function generateToken() {
-    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     $token = '';
-    
-    for ($i = 0; $i < 5; $i++) {
-        $token .= $chars[rand(0, strlen($chars) - 1)];
+    $length = 5;
+
+    for ($i = 0; $i < $length; $i++) {
+        $token .= $chars[random_int(0, strlen($chars) - 1)];
     }
-    
+
     return $token;
 }
 
