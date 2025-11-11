@@ -12,7 +12,7 @@ foreach ($possible_hosts as $host) {
     echo "<h3>Testing host: {$host}</h3>";
 
     try {
-        $conn = new mysqli($host, 'root', 'token_exujian_2025_dev', 'token_system');
+        $conn = new mysqli($host, 'root', '', 'token_system');
 
         if ($conn->connect_error) {
             echo "<p style='color: red;'>❌ Connection failed: " . $conn->connect_error . "</p>";

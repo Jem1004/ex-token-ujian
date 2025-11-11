@@ -3,8 +3,8 @@ require_once 'config.php';
 
 // Check if admin is logged in
 session_start();
-$isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
 
+$isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
 // Handle login
 if (isset($_POST['admin_password'])) {
     if ($_POST['admin_password'] === 'indonesia2025') {
